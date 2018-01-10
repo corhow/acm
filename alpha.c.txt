@@ -1,0 +1,20 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	int num;
+	cin >> num;
+	while (num--)
+	{
+		string A;
+		while (cin >> A)
+		{
+			int J = A.size() - 1;
+			if (A.size() <= 10)
+				cout << A << endl;
+			else
+				cout << A[0] << A.size() - 2 << A[J] << endl;
+		}
+	}
+}

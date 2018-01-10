@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int w;
+	while (cin >> w)
+	{
+		if (w < 4)
+		{
+			cout << "NO" << endl;
+			goto loop;
+		}
+		for(int i=2;i <= w/2;i += 2)
+			for (int j = 2; j < w; j += 2)
+			{
+				if (i + j == w)
+				{
+					cout << "YES" << endl;
+					goto loop;
+				}
+			}
+		cout << "NO" << endl;
+	loop:;
+	}
+}
