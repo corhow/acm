@@ -1,0 +1,19 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string A, B;
+	cin >> A >> B;
+	for (int i = 0; i < A.size(); i++)
+	{
+		if (A[i] >= 'A'&&A[i] <= 'Z')A[i] += 32;
+		if (B[i] >= 'A'&&B[i] <= 'Z')B[i] += 32;
+	}
+	if (A < B)
+		cout << "-1" << endl;
+	else if (A > B)
+		cout << "1" << endl;
+	else
+		cout << "0" << endl;
+}

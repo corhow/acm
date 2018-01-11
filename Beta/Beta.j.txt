@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	string A;
+	cin >> A;
+	int t = 0;
+	for (int i = 0; i < A.size(); i++)
+	{
+		if (A[i]=='W'&&A[i+1]=='U'&&A[i+2]=='B')
+		{
+			if(t==1)
+			cout << " ";
+			i = i + 2;
+			if (i > A.size())
+				break;
+		}
+		else
+		{
+			cout << A[i];
+			t = 1;
+		}
+	}
+	cout << endl;
+}

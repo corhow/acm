@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int k, n, w, pay = 0;
+	cin >> k >> n >> w;
+	for (int i = 1; i <= w; i++)
+		pay += i*k;
+	if (pay - n <= 0)
+		cout << "0" << endl;
+	else
+		cout << pay - n << endl;
+}

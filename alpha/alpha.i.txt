@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	int sum = 1, t;
+	string A;
+	cin >> A;
+	t = A[0] - '0';
+	for (int i = 1; i < A.size(); i++)
+	{
+		if
+			(A[i] - '0' == t)
+			sum++;
+		else
+			sum = 1;
+		t = A[i] - '0';
+		if (sum == 7)
+		{
+			cout << "YES" << endl;
+			goto loop;
+		}
+	}
+	cout << "NO" << endl;
+loop:;
+}
