@@ -1,0 +1,33 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int n, A[100], min = 0, sum = 0, t = 0, lock=0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> A[i];
+		if (A[i] == 0)
+		{
+			A[i] = -1;
+			lock = 1;
+		}
+		else
+			t++;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		sum = 0;
+		for (int j = i; j < n; j++)
+		{
+			sum += A[j];
+			if (sum <= min)
+				min = sum;
+		}
+	}
+	if (lock == 1)
+		cout << t + abs(min) << endl;
+	else
+		cout << t - 1 << endl;
+}

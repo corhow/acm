@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, A[10][10];
+	cin >> n;
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < n; j++)
+		{
+			if (i == 0 || j == 0)
+				A[i][j] = 1;
+			else
+				A[i][j] = A[i - 1][j] + A[i][j - 1];
+		}
+	cout << A[n - 1][n - 1] << endl;
+}
+
+
+±©Á¦£¡£¡£¡
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	switch (n)
+	{
+	case 1:cout << "1" << endl;break;
+	case 2:cout << "2" << endl;break;
+	case 3:cout << "6" << endl;break;
+	case 4:cout << "20" << endl;break;
+	case 5:cout << "70" << endl;break;
+	case 6:cout << "252" << endl;break;
+	case 7:cout << "924" << endl;break;
+	case 8:cout << "3432" << endl;break;
+	case 9:cout << "12870" << endl;break;
+	case 10:cout << "48620" << endl;break;
+	}
+}

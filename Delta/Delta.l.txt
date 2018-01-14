@@ -1,0 +1,28 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+	int A[3][2];
+	int n, sumcup = 0, summedal = 0, x, y;
+	for (int i = 0; i < 2; i++)
+		for (int j = 0; j < 3; j++)
+		{
+			cin >> A[i][j];
+			if (i == 0)
+				sumcup += A[i][j];
+			else
+				summedal += A[i][j];
+		}
+	cin >> n;
+	x = sumcup / 5;
+	y = summedal / 10;
+	if (sumcup % 5 != 0)
+		x++;
+	if (summedal % 10 != 0)
+		y++;
+	if (x + y <= n)
+		cout << "YES" << endl;
+	else
+		cout << "NO" << endl;
+}

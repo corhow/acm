@@ -1,0 +1,19 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int A[100000][2];
+int main()
+{
+	int n, min, pay = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < 2; j++)
+			cin >> A[i][j];
+	min = A[0][1];
+	for (int i = 0; i < n; i++)
+	{
+		if (A[i][1] <= min)min = A[i][1];
+		pay = pay + min*A[i][0];
+	}
+	cout << pay << endl;
+}

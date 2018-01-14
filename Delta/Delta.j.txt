@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, m, t=0;char A[100][100];
+	cin >> n >> m;
+	for (int i = 0; i < n; i++)
+		for (int j = 0; j < m; j++)
+		{
+			cin >> A[i][j];
+			if (A[i][j] == 'C' || A[i][j] == 'M' || A[i][j] == 'Y')
+				t = 1;
+		}
+	if (t == 1)
+		cout << "#Color" << endl;
+	else
+		cout << "#Black&White" << endl;
+}

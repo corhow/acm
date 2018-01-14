@@ -1,0 +1,13 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, tru=1, sum=0;
+	cin >> n;
+	while (tru <= n)
+	{
+		sum = sum + (n - tru + 1)*tru - (tru - 1);
+		tru++;
+	}
+	cout << sum << endl;
+}

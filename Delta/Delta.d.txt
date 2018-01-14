@@ -1,0 +1,28 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	string A[1000];
+	for (int i = 0; i < n; i++)
+		cin >> A[i];
+	for (int j = 0; j < n; j++)
+	{
+		for (int i = 0; i < 4; i++)
+			if (A[j][i] == 'O'&&A[j][i + 1] == 'O')
+			{
+				cout << "YES" << endl;
+				A[j][i] = '+';
+				A[j][i + 1] = '+';
+				goto loop;
+			}
+	}
+	cout << "NO" << endl;
+	goto loop2;
+loop:;
+	for (int i = 0; i < n; i++)
+		cout<< A[i]<<endl;
+loop2:;
+}

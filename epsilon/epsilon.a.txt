@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n;
+	cin >> n;
+	while (n--)
+	{
+		int m;
+		cin >> m;
+		int a = 360 / (180 - m);
+		double b = 360 / double(180 - m);
+		if (a == b)
+			cout << "YES" << endl;
+		else
+			cout << "NO" << endl;
+	}
+}

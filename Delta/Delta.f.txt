@@ -1,0 +1,26 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int A[100000], B[100000], C[100000];
+int main()
+{
+	int n, sum1 = 0, sum2 = 0, sum3 = 0;
+	cin >> n;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> A[i];
+		sum1 += A[i];
+	}
+	for (int i = 0; i < n - 1; i++)
+	{
+		cin >> B[i];
+		sum2 += B[i];
+	}
+	for (int i = 0; i < n - 2; i++)
+	{
+		cin >> C[i];
+		sum3 += C[i];
+	}
+	cout << sum1 - sum2 << endl;
+	cout << sum2 - sum3 << endl;
+}

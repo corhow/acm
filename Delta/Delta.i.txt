@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	int n, A[100][2], Miwin = 0, Chwin = 0;
+	cin >> n;
+	for(int i=0;i<n;i++)
+		for (int j = 0; j < 2; j++)
+		{
+			cin >> A[i][j];
+			if (j == 1)
+				if (A[i][0] < A[i][1])
+					Chwin++;
+				else if (A[i][0] > A[i][1])
+					Miwin++;
+				else
+				{
+					Chwin++;
+					Miwin++;
+				}
+		}
+	if (Chwin++ > Miwin++)
+		cout << "Chris" << endl;
+	else if (Chwin++ < Miwin++)
+		cout << "Mishka" <<endl;
+	else
+		cout << "Friendship is magic!^^" <<endl;
+}

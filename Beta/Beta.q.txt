@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+	long long int n, k, t;
+	cin >> k >> n;
+	if (k % 2 == 0)
+		t = k / 2;
+	else
+		t = k / 2 + 1;
+	if (n <= t)
+		cout << 2 * n - 1 << endl;
+	else
+		cout << (n - t) * 2 << endl;
+}

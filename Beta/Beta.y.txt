@@ -1,0 +1,17 @@
+#include<iostream>
+#include<string>
+#include<algorithm>
+using namespace std;
+int main()
+{
+	int sum = 0;
+	string A, B, C;
+	int i, j, r;
+	getline(cin, A);
+	for (int i = 0; i < A.size(); i++)
+		if (A[i] >= 'a'&&A[i] <= 'z')
+			B += A[i];
+	sort(B.begin(), B.end());
+	B.resize(unique(B.begin(), B.end()) - B.begin());
+	cout << B.size() << endl;
+}
